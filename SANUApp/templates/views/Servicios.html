@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block titulo %} Servicios {% endblock %}
+
+{% block contenido%}  
+  <div class="InicioHeader">
+    <h1>¡Conoce nuestros servicios!</h1>
+  </div>
+{%  for serviciosList in serviciosList %}
+    <div class="PadreComentario">
+        <div class="ComentariosCard">
+            <div class="ComentariosHead">
+                <div class="ComentariosCircle"></div>
+                    <div class="ComentariosImg">
+                        <img src="{{serviciosList.Foto_Servicio.url}}" alt="">
+                    </div>
+                </div>
+            <div class="ComentariosDescripcion">
+                <h3>{{serviciosList.Nombre_Servicio}}</h3>
+                <p>{{serviciosList.Descripcion_Servicio}}</p>
+            </div>
+        </div>
+    </div>
+{%  endfor %}
+<div class="row mt-3 justify-content-center">
+    <nav>
+        <ul class="pagination justify-content-center">
+            {% if serviciosList.has_previous %}
+            <li class="page-item">
+                <a href="?page=1" class="page-link">Primera</a>
+            </li>
+            <li class="page-item">
+                <a href="?page{{serviciosList.previous_page_number}}" class="page-link">&laquo;</a>
+            </li>
+            {% endif %}
+
+            {% for pagina in paginas %}
+
+                <li class="page-item {% if pagina_actual == pagina %} active {% endif %}">
+                    <a href="?page={{pagina}}" class="page-link">{{pagina}}</a>
+                </li>
+
+            {% endfor %}
+
+            {% if serviciosList.has_next %}
+            <li class="page-item">
+                <a href="?page={{serviciosList.next_page_number}}" class="page-link">&raquo;</a>
+            </li>
+            <li class="page-item">
+                <a href="?page{{serviciosList.paginator.num_pages}}" class="page-link">Última</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endblock %}

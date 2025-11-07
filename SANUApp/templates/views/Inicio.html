@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}
+  Inicio
+{% endblock %}
+
+{% block contenido %}
+  <div class="InicioHeader">
+    <h1>¡Conoce nuestro equipo!</h1>
+  </div>
+  <div class="PadreInicio">
+    <div class="HijoInicio">
+        <h1>Misión</h1>
+        <p>Salvar y mejorar la vida de nuestros pacientes y su familia a través de un sistema integral de medicina veterinaria especializada.</p>
+    </div>
+    <div class="HijoInicio">
+        <h1>Visión</h1>
+        <p>Brindar atención de medicina general y neurológica de alta calidad, enfocándonos en el bienestar de nuestros pacientes, en la actualización académica de nuestros médicos y en la mejora constante de tecnología e instalaciones del hospital.</p>
+    </div>
+  </div>
+  <div class="ContenedorImagenInicio">
+    <img src="{% static "assets/EquipoSANU.jpg" %}" alt="">
+  </div>
+{% endblock %}

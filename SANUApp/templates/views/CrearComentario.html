@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block titulo %} Crear comentario {% endblock %}
+
+{% block contenido%}
+    <div class="card">
+        <div class="card-header">Crear un comentario nuevo</div>
+        <div class="card-body">
+            {% include "views/form.html" %}
+        </div>
+    </div>
+    
+{% endblock %} 

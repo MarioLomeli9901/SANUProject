@@ -1,0 +1,262 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: 0%;
+}
+body{
+    background: linear-gradient(to right, #15616d, #f5f5f5) ;
+
+}
+/* Nav */
+.Navimg{
+    width: 70px;
+    height: 70px;
+}
+.nav-item .nav-link{
+    font-size: xx-large;
+    margin-left: 30px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+/* Comentarios */
+.PadreComentario{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-primary{
+    margin-top: 110px;
+    display: block;
+    background-color: #fbbc46;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.ComentariosCard{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: white ;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.ComentariosCard .ComentariosHead{
+    height: 125px;
+    width: 100%;
+    position: relative;
+}
+
+.ComentariosCard .ComentariosHead .ComentariosCircle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #0b6f72;
+    bottom: 0;
+}
+
+.ComentariosCard .ComentariosHead .ComentariosImg{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 50%;
+    bottom: -30;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.ComentariosCard .ComentariosHead .ComentariosImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fbbc46;
+}
+
+.ComentariosCard .ComentariosDescripcion{
+    height: 200px;
+    padding: 40px 20px 20px 20px;
+    border-bottom: solid 1px rgba(6, 74, 76, .18);
+    text-align: center;
+}
+
+
+/* Inicio */
+.InicioHeader{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+.PadreInicio{  
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* Centrado vertical */
+}
+.HijoInicio{
+    width: 40%; 
+    margin: auto;
+}
+.HijoInicio p{
+    font-size: x-large;
+}
+.ContenedorImagenInicio{
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ContenedorImagenInicio img{
+    width: 100%;
+}
+/* Contacto */
+.PadreContactanos{  
+    display: flex;
+    justify-content: center;
+    align-items: center;   /* Centrado vertical */
+    margin-top: 150px;
+}
+.HijoContactanos{
+    width: 40%; 
+    margin: auto;
+}
+
+.Mapa{
+    width: 100%;
+    height: 100%;
+}
+
+/* Nosotros */
+
+.PadreNosotros{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.NosotrosCard{
+    position: relative;
+    width: 450px;
+    height: 460px;
+    background-color: white ;
+    border-radius: 5px;
+    overflow: hidden;  
+    margin-right: 50px;
+    margin-left: 30px;
+}
+
+.NosotrosCard .NosotrosHead{
+    height: 125px;
+    width: 100%;
+    position: relative;
+}
+
+.NosotrosCard .NosotrosHead .NosotrosCircle{
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    border-radius: 50%;
+    background: #0b6f72;
+    bottom: 0;
+}
+
+.NosotrosCard .NosotrosHead .NosotrosImg{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 50%;
+    bottom: -30;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.NosotrosCard .NosotrosHead .NosotrosImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fbbc46;
+}
+
+.NosotrosCard .NosotrosDescripcion{
+    height: 200px;
+    padding: 40px 20px 20px 20px;
+    border-bottom: solid 1px rgba(6, 74, 76, .18);
+    text-align: center;
+}
+/* Crear comentarios */
+.card{
+    margin-top: 150px;
+}
+@media screen and (max-width: 800px){
+    .Navimg{
+        width: 50px;
+        height: 50px;
+    } 
+    .PadreInicio{
+        display: block;
+    }
+    .HijoInicio{
+        width: 80%; 
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .InicioHeader{
+        margin-top: 100px;
+    }
+    /* Contacto */
+    .PadreContactanos{  
+        display: block;
+    }
+    .HijoContactanos{
+        width: 80%; 
+        margin: auto;
+    }
+    .Mapa{
+        margin-top: 10%;
+    }
+    /* Nosotros */
+    .PadreNosotros{
+        display: block;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    .NosotrosCard{
+        width: 80%;
+    }
+    .NosotrosCard .NosotrosHead .NosotrosCircle{
+        width: 100%;
+    }
+    .NosotrosCard .NosotrosDescripcion{
+        font-size: small;
+        text-align: justify;
+    }
+   /* Comentarios */
+   .btn-primary{
+        margin-top: 20%;
+   }
+    .PadreComentario{
+        width: 100%;
+   }
+    .ComentariosCard{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+       /*Crear Comentario  */
+    .card{
+        margin-top: 100px;
+    }
+}
+
