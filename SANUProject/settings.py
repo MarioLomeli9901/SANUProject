@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-b1i7^)!6in5+q_&4i8656k^@+tp-qog#&glq$^g14ynm7gmn8z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["185.164.111.247"]
 
 
 # Application definition
@@ -77,12 +76,8 @@ WSGI_APPLICATION = 'SANUProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sanudb',
-        'USER': 'admin2',
-        'PASSWORD': 'admin2',
-        'HOST': 'localhost',  # Use '127.0.0.1' if 'localhost' doesn't work
-        'PORT': '5432',       # Default PostgreSQL port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -123,9 +118,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR/'static']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = 'img/'
-MEDIA_ROOT = BASE_DIR/'media'
+STATIC_ROOT = '/home/sanuadmin/project/SANUProject/staticfiles'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR/'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

@@ -31,7 +31,7 @@ class Comentarios(models.Model):
     Nombre_Paciente = models.CharField(max_length=120, verbose_name="Nombre del paciente")
     Descripcion_Comentario = models.TextField(max_length=1000, verbose_name="Descripcion del servicio brindado y atencion")
     Calificacion = models.IntegerField(verbose_name="¡Califica nuestro servicio de 1 a 5 Estrellas!")
-    Foto_Paciente = models.ImageField(upload_to="Comentarios")
+    Foto_Paciente = models.ImageField()
     Fecha_Comentario = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
